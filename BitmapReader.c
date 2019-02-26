@@ -125,6 +125,5 @@ void writeBMP(char* filename,int w,int h,uint8_t* img){
         fwrite(img+(w*(h-i-1)*3),1,3*w,f);
         fwrite(bmppad,1,(4-(w*3)%4)%4,f);
     }
-    free(img);
     fclose(f);
 }
